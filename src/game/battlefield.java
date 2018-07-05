@@ -30,7 +30,7 @@ class battlefield {
                     for (char[] aField : field) {
                         System.out.println(Arrays.toString(aField));
                     }
-                    c.checkAll();
+
 
                         System.out.println("{Ходит второй игрок.");
                         in1 = in.nextInt();
@@ -41,7 +41,6 @@ class battlefield {
                         for (char[] aField : field) {
                             System.out.println(Arrays.toString(aField));
                         }
-                        c.checkAll();
                     }
                 }
         }
