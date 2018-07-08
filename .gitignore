@@ -20,4 +20,4 @@ foo.txt
 
 .target/
 
-.out/
+.out/"*" 
