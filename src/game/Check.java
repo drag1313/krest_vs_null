@@ -1,8 +1,8 @@
 package game;
 public class Check {
 
-    public boolean checkAll() {
-        Battlefield b=new Battlefield();
+    public boolean checkAll(Battlefield) {
+
 
         int z=0;
         char move='x';
@@ -16,7 +16,7 @@ public class Check {
           }
         }
         for (int i = 0; i < 3; i++) {
-            if  (b.field[i][3-i]==){
+            if  (field[i][3-i]==){
                 z++;
                 if(z==3){
                     return true;

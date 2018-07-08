@@ -3,12 +3,12 @@ package game;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Battlefield {
+public class Battlefield {
     private char[][] field = new char[3][3];
     private Check c = new Check();
     private int in1;
     private int in2;
-    char symbol;
+    private char symbol;
 
     public void scan(char symbol){
         Scanner in = new Scanner(System.in);
