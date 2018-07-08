@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7ecc963-d7b7-409c-8fdf-22f85169c59c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/game/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/krest_vs_null/game/battlefield.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/krest_vs_null/game/battlefield.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/krest_vs_null/game/check.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/krest_vs_null/game/check.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Battlefield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Battlefield.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Battlefield.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Battlefield.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/Battlefield.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Check.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Check.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Check.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+            <state relative-caret-position="-180">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -44,8 +40,8 @@
       <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="153">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -79,8 +75,8 @@
         <option value="$PROJECT_DIR$/src/game/check.java" />
         <option value="$PROJECT_DIR$/src/game/battlefield.java" />
         <option value="$PROJECT_DIR$/src/game/Main.java" />
-        <option value="$PROJECT_DIR$/src/game/Check.java" />
         <option value="$PROJECT_DIR$/src/game/Start.java" />
+        <option value="$PROJECT_DIR$/src/game/Check.java" />
         <option value="$PROJECT_DIR$/src/game/Battlefield.java" />
       </list>
     </option>
@@ -400,27 +396,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Battlefield.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="153">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Check.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+        <state relative-caret-position="-180">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Battlefield.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,11 +1,12 @@
 package game;
-public class Check {
+class Check {
 
 
-    public static boolean checkAll(char field[][],char symbol) {
+    static boolean checkAll(char field[][], char symbol) {
         int z=0;
         int NumberOfMove=1;
-        if (NumberOfMove<4) {
+
+        if (NumberOfMove>4) {
             for (int i = 0; i < 3; i++) {
                 if (field[i][i] == 'x') {
                     z++;
@@ -23,9 +24,9 @@ public class Check {
                 }
             }
 
-            for (int x = 0;x<field.length;x++) {
+            for (char[] aField1 : field) {
                 for (int y = 0; y < field.length; y++) {
-                    if (field[x][y] == symbol) {
+                    if (aField1[y] == symbol) {
                         z++;
                         if (z % 3 == 0) {
                             return false;
@@ -34,11 +35,11 @@ public class Check {
                 }
             }
             for (int x = 0;x<field.length; x++) {
-                for (int y = 0; y < field.length; y++) {
-                    if (field[y][x] == symbol) {
+                for (char[] aField : field) {
+                    if (aField[x] == symbol) {
                         z++;
                         if (z % 3 == 0) {
-                            return true;
+                            return false;
                         }
                     }
                 }

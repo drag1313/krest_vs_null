@@ -3,9 +3,11 @@ package game;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Battlefield {
+import static game.Check.checkAll;
 
-    public char[][] field = new char[3][3];
+class Battlefield {
+
+    private char[][] field = new char[3][3];
     private Check c = new Check();
     private int in1;
     private int in2;
@@ -13,7 +15,7 @@ public class Battlefield {
 
 
 
-    public void scan(char symbol){
+    private void scan(char symbol){
         Scanner in = new Scanner(System.in);
         in1 = in.nextInt();
         in2 = in.nextInt();
@@ -22,7 +24,7 @@ public class Battlefield {
         field[in1][in2] = symbol;
     }
 
-    public void move() {
+    void move() {
 
         for (char[] row : field) {
             Arrays.fill(row, '-');
@@ -32,7 +34,7 @@ public class Battlefield {
         }
 
         for (int i = 0; i < 9; i++)
-            while (c.checkAll(field,symbol)) {
+            while (checkAll(field,symbol)) {
                 System.out.println("{Ходит первый игрок.");
                 scan('x');
                 field[in1][in2] = symbol;
