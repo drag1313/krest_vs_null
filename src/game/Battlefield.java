@@ -4,11 +4,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Battlefield {
-    private char[][] field = new char[3][3];
+
+    public char[][] field = new char[3][3];
     private Check c = new Check();
     private int in1;
     private int in2;
     private char symbol;
+
+
 
     public void scan(char symbol){
         Scanner in = new Scanner(System.in);
@@ -19,11 +22,7 @@ public class Battlefield {
         field[in1][in2] = symbol;
     }
 
-    public char[][] getField() {
-        return field;
-    }
-
-    public void move(boolean check) {
+    public void move() {
 
         for (char[] row : field) {
             Arrays.fill(row, '-');
@@ -33,7 +32,7 @@ public class Battlefield {
         }
 
         for (int i = 0; i < 9; i++)
-            if (check) {
+            while (c.checkAll(field,symbol)) {
                 System.out.println("{Ходит первый игрок.");
                 scan('x');
                 field[in1][in2] = symbol;

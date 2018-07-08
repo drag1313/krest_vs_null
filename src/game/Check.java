@@ -1,48 +1,51 @@
 package game;
 public class Check {
 
-    public boolean checkAll(Battlefield) {
 
-
+    public static boolean checkAll(char field[][],char symbol) {
         int z=0;
-        char move='x';
-
-        for (int i = 0; i < 3; i++) {
-          if  (getField[i][i]==){
-              z++;
-              if(z==3){
-                  return =true;
-              }
-          }
-        }
-        for (int i = 0; i < 3; i++) {
-            if  (field[i][3-i]==){
-                z++;
-                if(z==3){
-                    return true;
+        int NumberOfMove=1;
+        if (NumberOfMove<4) {
+            for (int i = 0; i < 3; i++) {
+                if (field[i][i] == 'x') {
+                    z++;
+                    if (z % 3 == 0) {
+                        return false;
+                    }
                 }
             }
-        }
-
-        for (int x = 0; x < field.length; x++) {
-            for (int y = 0; y < b.field.length;y++){
-                if (b.field[x][y]=='x'){
+            for (int i = 0; i < 3; i++) {
+                if (field[i][3 - i] ==symbol) {
                     z++;
-                    if(z==3){
-                        return =true;
+                    if (z % 3 == 0) {
+                        return false;
+                    }
+                }
+            }
+
+            for (int x = 0;x<field.length;x++) {
+                for (int y = 0; y < field.length; y++) {
+                    if (field[x][y] == symbol) {
+                        z++;
+                        if (z % 3 == 0) {
+                            return false;
+                        }
+                    }
+                }
+            }
+            for (int x = 0;x<field.length; x++) {
+                for (int y = 0; y < field.length; y++) {
+                    if (field[y][x] == symbol) {
+                        z++;
+                        if (z % 3 == 0) {
+                            return true;
+                        }
                     }
                 }
             }
         }
-        for (int x = 0; x < field.length; x++) {
-            for (int y = 0; y < b.field.length;y++){
-                if (b.field[y][x]=='x'){
-                    z++;
-                    if(z==3){
-                        b.check=true;
-                    }
-                }
-            }
-        }
+        NumberOfMove++;
+        return true;
     }
+
 }
