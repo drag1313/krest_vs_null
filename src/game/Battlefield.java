@@ -3,25 +3,47 @@ package game;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static game.Check.checkAll;
 
 class Battlefield {
 
     private char[][] field = new char[3][3];
     private Check c = new Check();
-    private int in1;
-    private int in2;
     private char symbol;
 
 
+    private void print(char symbol) {
+        for (char[] aField : field) {
+            System.out.println(Arrays.toString(aField));
+        }
+        if (symbol == 'x') {
+            System.out.println("{Ходит первый игрок.");
+        } else {
+            System.out.println("{Ходит второй игрок.");
+        }
+    }
 
-    private void scan(char symbol){
+
+    private void scan(char symbol) {
         Scanner in = new Scanner(System.in);
-        in1 = in.nextInt();
-        in2 = in.nextInt();
+        int in1 = in.nextInt();
+        int in2 = in.nextInt();
         in1--;
         in2--;
         field[in1][in2] = symbol;
+    }
+
+    private boolean checkAll(char field[][], char symbol) {
+        if (c.checkString(field, symbol) || c.checkColums(field, symbol) || c.checkDiagonal2(field, symbol) || c.checkDiagonal1(field, symbol)) {
+            return true;
+        } else if(symbol=='x'){
+            System.out.println("Победил первый игрок!");
+            return false;
+        }else {
+            System.out.println("Победил второй игрок!");
+            return false;
+        }
+
+
     }
 
     void move() {
@@ -29,24 +51,17 @@ class Battlefield {
         for (char[] row : field) {
             Arrays.fill(row, '-');
         }
-        for (char[] aField : field) {
-            System.out.println(Arrays.toString(aField));
-        }
 
         for (int i = 0; i < 9; i++)
-            while (checkAll(field,symbol)) {
-                System.out.println("{Ходит первый игрок.");
+            while (checkAll(field, symbol)) {
+                print('x');
                 scan('x');
-                field[in1][in2] = symbol;
-                for (char[] aField : field) {
-                    System.out.println(Arrays.toString(aField));
-                }
-                System.out.println("{Ходит второй игрок.");
+                checkAll(field, 'x');
+
+                print('o');
                 scan('o');
-                field[in1][in2] = symbol;
-                for (char[] aField : field) {
-                    System.out.println(Arrays.toString(aField));
-                }
+                checkAll(field, 'o');
+
             }
     }
 }

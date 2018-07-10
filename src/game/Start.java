@@ -6,6 +6,6 @@ public class Start {
         Battlefield b = new Battlefield();
         b.move();
 
-        
+
     }
 }
