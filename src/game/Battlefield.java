@@ -32,19 +32,7 @@ class Battlefield {
         field[in1][in2] = symbol;
     }
 
-    private boolean checkAll(char field[][], char symbol) {
-        if (c.checkString(field, symbol) || c.checkColums(field, symbol) || c.checkDiagonal2(field, symbol) || c.checkDiagonal1(field, symbol)) {
-            return true;
-        } else if(symbol=='x'){
-            System.out.println("Победил первый игрок!");
-            return false;
-        }else {
-            System.out.println("Победил второй игрок!");
-            return false;
-        }
 
-
-    }
 
     void move() {
 
@@ -53,15 +41,18 @@ class Battlefield {
         }
 
         for (int i = 0; i < 9; i++)
-            while (checkAll(field, symbol)) {
+            while (true) {
                 print('x');
                 scan('x');
-                checkAll(field, 'x');
+                if (c.checkAll(field, 'x') || c.checkAll(field, 'o')) {
+                    break;
+                }
 
                 print('o');
                 scan('o');
-                checkAll(field, 'o');
-
+                if (c.checkAll(field, 'x') || c.checkAll(field, 'o')) {
+                    break;
+                }
             }
     }
 }
