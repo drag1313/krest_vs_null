@@ -1,15 +1,23 @@
 package game;
 
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 
-class Battlefield {
-
+public class Battlefield {
+    Check c = new Check();
     private char[][] field = new char[3][3];
-    private Check c = new Check();
     private char symbol;
+    int n = 0;
 
+    public Battlefield() {
+        for (char[] row : field)
+
+        {
+            Arrays.fill(row, '-');
+        }
+    }
 
     private void print(char symbol) {
         for (char[] aField : field) {
@@ -33,29 +41,31 @@ class Battlefield {
     }
 
     private boolean win(char field[][], char symbol) {
-        if (c.checkAll(field, 'x') || c.checkAll(field, 'o')) {
+        if (Check.checkAll(field, 'x') || Check.checkAll(field, 'o')) {
             if (symbol == 'x') {
                 System.out.println("Победил первый игрок!");
             }
-            if(symbol=='o'){
+            if (symbol == 'o') {
                 System.out.println("Победил второй игрок!");
             }
+
+            return true;
+        }
+        if (n > 8) {
+            System.out.println("Ничья! Победила дружба!");
             return true;
         }
         return false;
 
     }
 
-    void move() {
-
-        for (char[] row : field) {
-            Arrays.fill(row, '-');
-        }
+    public void move() {
 
 
         while (true) {
             print('x');
             scan('x');
+            n++;
             if (win(field, 'x')) {
                 break;
             }
@@ -63,6 +73,7 @@ class Battlefield {
 
             print('o');
             scan('o');
+            n++;
             if (win(field, 'o')) {
                 break;
             }
